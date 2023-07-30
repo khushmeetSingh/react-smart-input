@@ -1,0 +1,1 @@
+export const FORMAT_PLACEHOLDERS = '#@9';
