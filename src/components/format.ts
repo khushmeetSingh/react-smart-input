@@ -46,12 +46,14 @@ export const format = (val: string, format: string, caretPos: number) => {
     //code for caret position:
 
     let caretCorr = 0;
-    for(let i=0;i<caretPos;i++)
-    {
-        if(!FORMAT_PLACEHOLDERS.includes(format[i])){
-            caretCorr++;
+    console.log(`valLength is ${val.length} and the caret pos is ${caretPos}`);
+    if(val.length === caretPos)
+        for(let i=0;i<caretPos;i++)
+        {
+            if(!FORMAT_PLACEHOLDERS.includes(format[i])){
+                caretCorr++;
+            }
         }
-    }
     let newCaretPos = caretPos + caretCorr;
     console.log(`new caret pos is ${newCaretPos}`);
     
